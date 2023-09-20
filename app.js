@@ -14,12 +14,12 @@ const app = express();
 app.use(express.static(__dirname+'/public'))
 
 // setting view engine and layouts
-app.set('view', 'ejs')
-app.use(expressEjsLayout())
-
+app.use(expressEjsLayout)
+app.set('view engine', 'ejs')
+app.set('layout', 'pages/admin/layouts/master')
 
 // Users routes
-app.use("/", frontendRoute);
+// app.use("/", frontendRoute);
 // Admin routes
 app.use("/admin", adminRoute);
 

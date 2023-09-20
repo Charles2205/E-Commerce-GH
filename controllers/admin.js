@@ -1,6 +1,6 @@
 
 const index = (req, res)=>{
-    res.send('Working')
+    res.render('pages/admin/pages/index')
 }
 
 
